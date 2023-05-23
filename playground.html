@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dazed and Confused Playground</title>
+  </head>
+  <body>
+    <h1>Welcome to Dazed & Confused Playground</h1>
+    <p id="anon-para">Here is your anonymous ID: </p>
+    <script type="text/javascript">
+      var _cio = _cio || [];
+      (function () {
+        var a, b, c;
+        a = function (f) {
+          return function () {
+            _cio.push([f].concat(Array.prototype.slice.call(arguments, 0)));
+          };
+        };
+        b = ["load", "identify", "sidentify", "track", "page"];
+        for (c = 0; c < b.length; c++) {
+          _cio[b[c]] = a(b[c]);
+        }
+        var t = document.createElement("script"),
+          s = document.getElementsByTagName("script")[0];
+        t.async = true;
+        t.id = "cio-tracker";
+        t.setAttribute("data-site-id", "b644071afca9ea9beb01");
+        t.src = "https://assets.customer.io/assets/track.js";
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+    <script src="playground.js"></script>
+  </body>
+</html>
